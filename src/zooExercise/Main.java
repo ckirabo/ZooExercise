@@ -25,9 +25,8 @@ public class Main {
 		
 
 		ArrayList<Animal> Mammal = (ArrayList<Animal>) zoo.stream()
-				.filter(a -> isMammal(a))
+				.filter(b -> isMammal(b))
 				.collect(Collectors.toList());
-	
 		
 		
 		ArrayList<Animal> Bird = (ArrayList<Animal>) zoo.stream()
@@ -36,21 +35,21 @@ public class Main {
 
 		
 		for(int i = 0; i< Mammal.size(); i++) {
-
-			System.out.println("Mammal "+ i + " " + Mammal.get(i));
+			int j = i + 1;
+			System.out.println("Mammal "+ j + " " + Mammal.get(i));	
 			
 		}
 		
-		for(int j = 0; j< Bird.size(); j++) {
-
-			System.out.println("Bird "+ j + " " + Bird.get(j));
-			
+		for(int k = 0; k< Bird.size(); k++) {	
+			int l = k + 1;
+			System.out.println("Bird "+ l + " " + Bird.get(k));	
 		}
 		
 		
 	
 	}
 	
+
 	
 	public static boolean isMammal(Animal a) {
 		
