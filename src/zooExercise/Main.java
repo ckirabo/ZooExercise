@@ -10,11 +10,21 @@ public class Main {
 		//List<Animals> zoo = new LinkedList<Animals>();
 		
 		Cat cat1 = new Cat("Jack","Cat");
-		ArrayList<Animal> zoo = new ArrayList<Animal>();
-		zoo.add(cat1);
-		//cat has been added
-		System.out.print(cat1.makeNoise());
+		Dog dog1 = new Dog("Bob" , "Dog");
+		Falcon falcon1 = new Falcon("Perry", "Falcon");
+		Chicken chicken1 = new Chicken("Daisy", "Chicken");
 		
+		ArrayList<Animal> zoo = new ArrayList<Animal>();
+		
+		zoo.add(cat1);
+		zoo.add(dog1);
+		zoo.add(falcon1);
+		zoo.add(chicken1);
+			
+	    System.out.println(cat1.toString());
+	    System.out.println(dog1.toString());
+	    System.out.println(falcon1.toString());
+	    System.out.println(chicken1.toString());
 	}
 
 }

@@ -15,15 +15,16 @@ public class Cat extends Mammal implements NoiseInterface{
 
 	///////////Methods///////////////////////////
 	
-	public String getCatInfo() {
-		return "Name " + this.getName() +
-		        " Species " + this.getSpecies();
-	}
-
 	
 	public String makeNoise() {
-		return "Meow";
+		return "Meow!";
 	}
 	
+	public String toString() {
+		return   "Name " + this.getName() +
+		        " Species " + this.getSpecies() +
+		        " Present ? " + makeNoise();
+		
+	}
 		
 }
