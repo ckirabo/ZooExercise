@@ -1,6 +1,7 @@
 package zooExercise;
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -16,15 +17,62 @@ public class Main {
 		
 		ArrayList<Animal> zoo = new ArrayList<Animal>();
 		
+		
 		zoo.add(cat1);
 		zoo.add(dog1);
 		zoo.add(falcon1);
 		zoo.add(chicken1);
+		
+
+		ArrayList<Animal> Mammal = (ArrayList<Animal>) zoo.stream()
+				.filter(a -> isMammal(a))
+				.collect(Collectors.toList());
+	
+		
+		
+		ArrayList<Animal> Bird = (ArrayList<Animal>) zoo.stream()
+				.filter(b -> isBird(b))
+				.collect(Collectors.toList());
+
+		
+		for(int i = 0; i< Mammal.size(); i++) {
+
+			System.out.println("Mammal "+ i + " " + Mammal.get(i));
 			
-	    System.out.println(cat1.toString());
-	    System.out.println(dog1.toString());
-	    System.out.println(falcon1.toString());
-	    System.out.println(chicken1.toString());
+		}
+		
+		for(int j = 0; j< Bird.size(); j++) {
+
+			System.out.println("Bird "+ j + " " + Bird.get(j));
+			
+		}
+		
+		
+	
 	}
+	
+	
+	public static boolean isMammal(Animal a) {
+		
+		if(a instanceof Mammal) {
+			return true;
+		}
+		else {	
+		return false;}
+	}
+	
+	
+	
+	
+	public static boolean isBird(Animal b) {
+		if (b instanceof Bird) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
+
 
 }
